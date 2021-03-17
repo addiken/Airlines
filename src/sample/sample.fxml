@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TableView fx:id="table" layoutX="10.0" layoutY="36.0" prefHeight="300.0" prefWidth="741.0">
+            <columns>
+                <TableColumn fx:id="c1" maxWidth="126.0" minWidth="95.0" prefWidth="118.0" resizable="false" text="Шифр рейса" />
+                <TableColumn fx:id="c2" maxWidth="150.0" minWidth="72.0" prefWidth="137.0" resizable="false" text="Тип самолета" />
+                <TableColumn fx:id="c3" prefWidth="164.0" resizable="false" text="Город назначения" />
+                <TableColumn fx:id="c4" prefWidth="170.0" resizable="false" text="Время отправления" />
+                <TableColumn fx:id="c5" prefWidth="151.0" resizable="false" text="Часов в полете" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnAdd" layoutX="671.0" layoutY="381.0" mnemonicParsing="false" onAction="#addFlight" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: e5e5e5;" text="Добавить" />
+        <TextField fx:id="tf1" layoutX="11.0" layoutY="346.0" prefHeight="25.0" prefWidth="118.0" promptText="Шифр" />
+        <TextField fx:id="tf2" layoutX="129.0" layoutY="346.0" prefHeight="25.0" prefWidth="137.0" promptText="Тип самолета" />
+        <TextField fx:id="tf3" layoutX="266.0" layoutY="346.0" prefHeight="25.0" prefWidth="164.0" promptText="Город назначения" />
+        <TextField fx:id="tf4" layoutX="430.0" layoutY="346.0" prefHeight="25.0" prefWidth="170.0" promptText="Время отправления" />
+        <TextField fx:id="tf5" layoutX="600.0" layoutY="346.0" prefHeight="25.0" prefWidth="151.0" promptText="Часов в полете" />
+        <TextField fx:id="tf6" layoutX="11.0" layoutY="381.0" prefHeight="25.0" prefWidth="118.0" promptText="Шифр" />
+        <TextField fx:id="tf7" layoutX="266.0" layoutY="381.0" prefHeight="25.0" prefWidth="164.0" promptText="Город назначения" />
+        <Button fx:id="btndlt2" graphicTextGap="0.0" layoutX="440.0" layoutY="381.0" mnemonicParsing="false" onAction="#del2" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: e5e5e5;" text="Удалить" />
+        <Button fx:id="btndlt1" layoutX="139.0" layoutY="381.0" mnemonicParsing="false" onAction="#del1" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: e5e5e5;" text="Удалить" />
+      <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="1000.0" style="-fx-background-color: e5e5e5;">
+        <menus>
+          <Menu fx:id="menu1" mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem fx:id="save" mnemonicParsing="false" onAction="#saveFile" text="Сохранить" />
+                  <MenuItem fx:id="open" mnemonicParsing="false" onAction="#openFile" text="Открыть" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btnEdit" layoutX="551.0" layoutY="381.0" mnemonicParsing="false" onAction="#editFlight" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: e5e5e5;" text="Редактировать" />
+      <Label layoutX="12.0" layoutY="419.0" prefHeight="18.0" prefWidth="209.0" text="Общее количество авиарейсов: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb1" layoutX="234.0" layoutY="416.0" prefHeight="25.0" prefWidth="36.0" text="пусто">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUpdate1" layoutX="282.0" layoutY="417.0" mnemonicParsing="false" onAction="#reys" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: e5e5e5;" text="Обновить" />
+      <Label layoutX="12.0" layoutY="457.0" prefHeight="20.0" prefWidth="209.0" text="Общее количество городов: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb2" layoutX="234.0" layoutY="454.0" prefHeight="25.0" prefWidth="36.0" text="пусто">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUpdate2" layoutX="282.0" layoutY="454.0" mnemonicParsing="false" onAction="#cities" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: e5e5e5;" text="Обновить" />
+      <TableView fx:id="table2" layoutX="761.0" layoutY="36.0" prefHeight="300.0" prefWidth="228.0">
+        <columns>
+          <TableColumn fx:id="c6" prefWidth="150.0" text="Тип самолета" />
+          <TableColumn fx:id="c7" prefWidth="77.0" text="Мин. кол-во часов в полете" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnUpdate3" layoutX="761.0" layoutY="346.0" mnemonicParsing="false" onAction="#hours" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: e5e5e5;" text="Обновить" />
+    </children>
+</AnchorPane>
